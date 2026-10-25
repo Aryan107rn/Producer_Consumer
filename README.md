@@ -12,10 +12,10 @@ Open `http://localhost:4173`. The app uses browser-native JavaScript modules and
 
 ## Deploy to Vercel
 
-This project is configured as a static site; Vercel serves `index.html` and the files in `src/` directly. No serverless functions or build step are required.
+This project builds to a static `dist/` directory; no serverless functions or external dependencies are required.
 
 1. Import this repository into Vercel and set the project root to the repository root.
-2. Keep the framework preset as **Other**. The checked-in `vercel.json` disables the build command and sets the project root as the static output directory.
+2. Keep the framework preset as **Other** and use the build and output settings from the checked-in `vercel.json` (`npm run build` and `dist`).
 3. Deploy. Vercel will serve the site at the deployment URL; subsequent pushes to the connected Git branch trigger new deployments.
 
 You can also deploy from the repository root with the Vercel CLI:

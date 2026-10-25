@@ -2,6 +2,10 @@
 
 An interactive top-down battle royale arena and an inspectable producer–consumer synchronization lab. Game input and Canvas rendering stay responsive while a separate scheduler processes game events through a bounded FIFO buffer.
 
+## Live demo
+
+**Play it now:** [producerconsumer.vercel.app](https://producerconsumer.vercel.app/)
+
 ## Run locally
 
 ```sh
@@ -16,7 +20,7 @@ This project builds to a static `dist/` directory; no serverless functions or ex
 
 1. Import this repository into Vercel and set the project root to the repository root.
 2. Keep the framework preset as **Other** and use the build and output settings from the checked-in `vercel.json` (`npm run build` and `dist`).
-3. Deploy. Vercel will serve the site at the deployment URL; subsequent pushes to the connected Git branch trigger new deployments.
+3. Deploy. The production site is available at [producerconsumer.vercel.app](https://producerconsumer.vercel.app/); subsequent pushes to the connected Git branch trigger new deployments.
 
 You can also deploy from the repository root with the Vercel CLI:
 

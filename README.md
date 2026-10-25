@@ -1,17 +1,30 @@
-<<<<<<< HEAD
-# Producer_Consumer
-=======
 # Last Circle — Producer–Consumer OS Simulator
 
 An interactive top-down battle royale arena and an inspectable producer–consumer synchronization lab. Game input and Canvas rendering stay responsive while a separate scheduler processes game events through a bounded FIFO buffer.
 
-## Run it
+## Run locally
 
 ```sh
 npm run dev
 ```
 
 Open `http://localhost:4173`. The app uses browser-native JavaScript modules and Node's built-in static server, so it has no package installation step or external runtime dependencies. Set `PORT=8080` to choose a different port.
+
+## Deploy to Vercel
+
+This project is configured as a static site; Vercel serves `index.html` and the files in `src/` directly. No serverless functions or build step are required.
+
+1. Import this repository into Vercel and set the project root to the repository root.
+2. Keep the framework preset as **Other**. The checked-in `vercel.json` disables the build command and sets the project root as the static output directory.
+3. Deploy. Vercel will serve the site at the deployment URL; subsequent pushes to the connected Git branch trigger new deployments.
+
+You can also deploy from the repository root with the Vercel CLI:
+
+```sh
+npx vercel
+```
+
+Use `npx vercel --prod` to deploy directly to production.
 
 ## Play and demonstrate
 
@@ -41,4 +54,3 @@ npm test
 ```
 
 The checks cover semaphore invariants, full-buffer producer blocking and FIFO promotion, empty-buffer consumer blocking, staged mutex ownership, restart, and the controlled lost-update demonstration. Browser controls and Canvas rendering still need an interactive browser session for a full visual check.
->>>>>>> c3c5cbe (initial commit)
